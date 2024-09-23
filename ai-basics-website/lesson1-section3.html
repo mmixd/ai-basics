@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Types of AI - Lesson 1</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Lesson 1: Introduction to Artificial Intelligence</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="lessons.html">Lessons</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+        <ul>
+            <li id="step1" class="completed"><a href="lesson1-section1.html" onclick="goToNextStep(1)">1. What is AI?</a></li>
+            <li id="step2" class="completed"><a href="lesson1-section2.html" onclick="goToNextStep(2)">2. How AI Works</a></li>
+            <li id="step3" class="active"><a href="lesson1-section3.html" onclick="goToNextStep(3)">3. Types of AI</a></li>
+            <li id="step4"><a href="lesson1-section4.html" onclick="goToNextStep(4)">4. Examples in Everyday Life</a></li>
+            <li id="step5"><a href="lesson1-section5.html" onclick="goToNextStep(5)">5. Quiz</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <section class="content-block">
+            <h2>Different Types of AI</h2>
+            <div class="card-container">
+                <!-- Card 1: Supervised Learning -->
+                <div class="card">
+                    <img src="images/cats.jpg" alt="Supervised Learning" class="card-image">
+                    <h3>Supervised Learning</h3>
+                    <p>In supervised learning, AI is given labeled data (like pictures of cats labeled 'cat') and learns to recognize new examples based on these labels.</p>
+                </div>
+                <!-- Card 2: Unsupervised Learning -->
+                <div class="card">
+                    <img src="images/fruit-sorting.jpg" alt="Unsupervised Learning" class="card-image">
+                    <h3>Unsupervised Learning</h3>
+                    <p>In unsupervised learning, AI finds patterns on its own without any labels. It's like sorting a bag of mixed fruit into groups.</p>
+                </div>
+                <!-- Card 3: Reinforcement Learning -->
+                <div class="card">
+                    <img src="images/ride-bike.jpg" alt="Reinforcement Learning" class="card-image">
+                    <h3>Reinforcement Learning</h3>
+                    <p>AI learns by trial and error, similar to how you learn to ride a bike. It gets rewards for doing the right thing and penalties for mistakes.</p>
+                </div>
+            </div>
+            <p><strong>Key Takeaway:</strong> AI can learn in different ways, just like people do.</p>
+             
+            <!-- Navigation Buttons -->
+            <div class="navigation-buttons">
+                <a href="lesson1-section2.html" class="outline-button">Back</a>
+                <a href="lesson1-section4.html" class="nav-button">Next</a>
+            </div>
+            
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

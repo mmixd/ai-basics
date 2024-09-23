@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact - AI Basics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Optional: Include Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <h1>AI Basics for Beginners</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="lessons.html">Lessons</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="content-block">
+            <h2>Contact Me</h2>
+            <p>I'd love to hear from you! Whether you have questions about the lessons, feedback on the site, or just want to connect, feel free to reach out.</p>
+
+            <!-- Contact Form -->
+            <form id="contact-form" action="mailto:your.email@example.com" method="POST" enctype="text/plain">
+                <div class="form-group">
+                    <label for="name">Your Name<span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email<span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject<span class="required">*</span></label>
+                    <input type="text" id="subject" name="subject" required placeholder="Enter the subject">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message<span class="required">*</span></label>
+                    <textarea id="message" name="message" required placeholder="Enter your message" rows="6"></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+
+            <!-- Alternative Contact Methods -->
+            <p>You can also reach me via email at <a href="mailto:your.email@example.com">mallorym.tx@gmail.com</a>.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 AI Basics. All rights reserved.</p>
+    </footer>
+</body>
+</html>

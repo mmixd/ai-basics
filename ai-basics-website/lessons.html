@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lessons - AI Basics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Optional: Include Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <h1>AI Basics for Beginners</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="lessons.html">Lessons</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="content-block">
+            <h2>All Lessons</h2>
+            <p>Explore our comprehensive lessons to deepen your understanding of Artificial Intelligence.</p>
+
+            <!-- Lesson Cards -->
+            <div class="lesson-card-container">
+                <!-- Lesson 1 Card -->
+                <div class="lesson-card" id="lesson1-card">
+                    <img src="images/lesson1.jpg" alt="Introduction to AI" class="lesson-card-image">
+                    <h3>Lesson 1: Introduction to AI</h3>
+                    <p><strong>Duration:</strong> 30 minutes</p>
+                    <p><strong>Overview:</strong> Discover what AI is, how it works, and its impact on our daily lives.</p>
+                    <p><strong>Learning Objectives:</strong></p>
+                    <ul>
+                        <li>Understand the basics of AI.</li>
+                        <li>Recognize AI applications in everyday life.</li>
+                    </ul>
+                    <button class="start-lesson-button" onclick="location.href='lesson1-outline.html'">Start Lesson 1</button>
+                </div>
+                <!-- Lesson 2 Card -->
+                <div class="lesson-card" id="lesson2-card">
+                    <img src="images/lesson2.jpg" alt="How Machines Learn" class="lesson-card-image">
+                    <h3>Lesson 2: How Machines Learn</h3>
+                    <p><strong>Duration:</strong> 45 minutes</p>
+                    <p><strong>Overview:</strong> Learn about machine learning and how computers improve over time.</p>
+                    <p><strong>Learning Objectives:</strong></p>
+                    <ul>
+                        <li>Understand the concept of machine learning.</li>
+                        <li>Identify different types of learning algorithms.</li>
+                    </ul>
+                    <button class="start-lesson-button" onclick="location.href='lesson2-outline.html'">Start Lesson 2</button>
+                </div>
+                <!-- Lesson 3 Card -->
+                <div class="lesson-card" id="lesson3-card">
+                    <img src="images/lesson3.jpg" alt="AI in Everyday Life" class="lesson-card-image">
+                    <h3>Lesson 3: AI in Everyday Life</h3>
+                    <p><strong>Duration:</strong> 40 minutes</p>
+                    <p><strong>Overview:</strong> Explore how AI is integrated into devices and services you use every day.</p>
+                    <p><strong>Learning Objectives:</strong></p>
+                    <ul>
+                        <li>Identify AI applications in common technologies.</li>
+                        <li>Understand the impact of AI on society.</li>
+                    </ul>
+                    <button class="start-lesson-button" onclick="location.href='lesson3-outline.html'">Start Lesson 3</button>
+                </div>
+                <!-- Add more lesson cards as needed -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 AI Basics. All rights reserved.</p>
+    </footer>
+
+    <!-- Include JavaScript for progress tracking -->
+    <script>
+        window.addEventListener('load', function() {
+            // Check if Lesson 1 is completed
+            if (localStorage.getItem('lesson1Completed') === 'true') {
+                var lesson1Card = document.getElementById('lesson1-card');
+                if (lesson1Card) {
+                    lesson1Card.classList.add('completed');
+                    var button = lesson1Card.querySelector('.start-lesson-button');
+                    if (button) {
+                        button.textContent = 'Review Lesson 1';
+                    }
+                    var completedBadge = document.createElement('div');
+                    completedBadge.classList.add('completed-badge');
+                    completedBadge.textContent = 'Completed';
+                    lesson1Card.appendChild(completedBadge);
+                }
+            }
+            // Check if Lesson 2 is completed
+            if (localStorage.getItem('lesson2Completed') === 'true') {
+                var lesson2Card = document.getElementById('lesson2-card');
+                if (lesson2Card) {
+                    lesson2Card.classList.add('completed');
+                    var button = lesson2Card.querySelector('.start-lesson-button');
+                    if (button) {
+                        button.textContent = 'Review Lesson 2';
+                    }
+                    var completedBadge = document.createElement('div');
+                    completedBadge.classList.add('completed-badge');
+                    completedBadge.textContent = 'Completed';
+                    lesson2Card.appendChild(completedBadge);
+                }
+            }
+            // Similarly, check for other lessons when available
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>How Does AI Work? - Lesson 1</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Lesson 1: Introduction to Artificial Intelligence</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="lessons.html">Lessons</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+        <ul>
+            <li id="step1" class="completed"><a href="lesson1-section1.html" onclick="goToNextStep(1)">1. What is AI?</a></li>
+            <li id="step2" class="active"><a href="lesson1-section2.html" onclick="goToNextStep(2)">2. How AI Works</a></li>
+            <li id="step3"><a href="lesson1-section3.html" onclick="goToNextStep(3)">3. Types of AI</a></li>
+            <li id="step4"><a href="lesson1-section4.html" onclick="goToNextStep(4)">4. Examples in Everyday Life</a></li>
+            <li id="step5"><a href="lesson1-section5.html" onclick="goToNextStep(5)">5. Quiz</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <section class="content-block">
+            <img src="images/dog-breeds.jpg" alt=" illustration of a person learning different dog breeds by looking at pictures" class="lesson-image">
+            <h2>How Does AI Work?</h2>
+            <p>AI works by processing large amounts of data using algorithms. An algorithm is like a recipe that tells a computer what steps to follow to solve a problem or complete a task.</p>
+            <p><strong>How AI Uses Algorithms:</strong> AI uses algorithms to learn from data. For example, if you show a computer thousands of pictures of cats, it can learn to recognize a cat in a new photo. This process is similar to how a person might learn to recognize different breeds of dogs by looking at many pictures over time.</p>
+            <p><strong>Key Takeaway:</strong> AI needs data and instructions (algorithms) to learn and make decisions.</p>
+             
+            <!-- Navigation Buttons -->
+             <div class="navigation-buttons">
+                <a href="lesson1-section1.html" class="outline-button">Back</a>
+                <a href="lesson1-section3.html" class="nav-button">Next</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

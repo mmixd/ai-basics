@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 1 Completion - AI Basics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Optional: Include Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+</head>
+<body>
+    <!-- Include Confetti Script -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+<script>
+    // Launch confetti on page load
+    confetti({
+        particleCount: 150,
+        spread: 70,
+        origin: { y: 0.6 }
+    });
+</script>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <h1>AI Basics for Beginners</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="lessons.html">Lessons</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="completion-section">
+            <div class="completion-content">
+               
+                <h2>Congratulations!</h2>
+                <p>You've successfully completed <strong>Lesson 1: Introduction to Artificial Intelligence</strong>.</p>
+                <p>You’ve learned the basics of AI, including what AI is, how it works, different types of AI, and examples of AI in everyday life. Great job!</p>
+                
+                <!-- Achievement Badge -->
+                <div class="achievement-badge">
+                    <img src="images/badge.png" alt="Achievement Badge">
+                    <p>You’ve earned the <strong>"AI Basics"</strong> Badge!</p>
+                </div>
+
+                <!-- Call to Action for Next Lesson -->
+                <button class="start-next-lesson-button" onclick="location.href='lesson2-outline.html'">Start Lesson 2: How Machines Learn</button>
+                
+                <!-- Navigation Buttons -->
+                <div class="navigation-buttons">
+                    <a href="lesson1-outline.html" class="outline-button">Back to Lesson Outline</a>
+                    <a href="index.html" class="nav-button">Return to Home</a>
+                </div>
+            </div>
+        </section>
+        <div class="progress-tracker">
+    <p>You have completed <strong>1 out of 5</strong> lessons.</p>
+</div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 AI Basics. All rights reserved.</p>
+    </footer>
+        <!-- Include this script at the end of the body, just before the closing </body> tag -->
+<script>
+    // Set a flag in local storage to indicate Lesson 1 completion
+    window.onload = function() {
+        localStorage.setItem('lesson1Completed', 'true');
+    };
+</script>
+</body>
+</html>

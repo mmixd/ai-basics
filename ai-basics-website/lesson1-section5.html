@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz - Lesson 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <h1>Lesson 1: Introduction to Artificial Intelligence</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="lessons.html">Lessons</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+        <ul>
+            <li id="step1" class="completed"><a href="lesson1-section1.html">1. What is AI?</a></li>
+            <li id="step2" class="completed"><a href="lesson1-section2.html">2. How AI Works</a></li>
+            <li id="step3" class="completed"><a href="lesson1-section3.html">3. Types of AI</a></li>
+            <li id="step4" class="completed"><a href="lesson1-section4.html">4. Examples in Everyday Life</a></li>
+            <li id="step5" class="active"><a href="lesson1-section5.html">5. Quiz</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <section class="content-block">
+            <h2>Quiz: Test Your Knowledge</h2>
+            <p>Now it's time to see what you've learned! Answer the questions below to test your understanding.</p>
+            
+            <!-- Quiz Form -->
+            <form id="quiz-form">
+                <!-- Quiz Questions -->
+                <div class="quiz-question">
+                    <p><strong>Question 1:</strong> Which of the following best describes Artificial Intelligence (AI)?</p>
+                    <label><input type="radio" name="question1" value="A"> A) A type of human intelligence</label><br>
+                    <label><input type="radio" name="question1" value="B"> B) A way for computers to simulate human-like thinking and learning processes</label><br>
+                    <label><input type="radio" name="question1" value="C"> C) A programming language</label><br>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>Question 2:</strong> What does AI need to learn?</p>
+                    <label><input type="radio" name="question2" value="A"> A) Data and instructions</label><br>
+                    <label><input type="radio" name="question2" value="B"> B) Just instructions</label><br>
+                    <label><input type="radio" name="question2" value="C"> C) Nothing, it learns by itself</label><br>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>Question 3:</strong> Which of these is NOT an example of AI?</p>
+                    <label><input type="radio" name="question3" value="A"> A) A virtual assistant like Siri</label><br>
+                    <label><input type="radio" name="question3" value="B"> B) A weather app that shows the current temperature</label><br>
+                    <label><input type="radio" name="question3" value="C"> C) A movie recommendation on Netflix</label><br>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>Question 4:</strong> How does AI improve over time?</p>
+                    <label><input type="radio" name="question4" value="A"> A) By doing the same thing repeatedly</label><br>
+                    <label><input type="radio" name="question4" value="B"> B) By processing more data and learning from it</label><br>
+                    <label><input type="radio" name="question4" value="C"> C) By deleting old data</label><br>
+                </div>
+                
+                <!-- Submit Button -->
+                <button type="button" class="submit-button" onclick="checkAnswers()">Submit Answers</button>
+            </form>
+            
+            <!-- Quiz Result -->
+            <div id="quiz-result" class="quiz-result"></div>
+
+            <!-- Navigation Buttons -->
+            <div class="navigation-buttons">
+                <a href="lesson1-section4.html" class="outline-button">Back</a>
+                <a href="lesson1-completion.html" class="nav-button" id="next-button" style="display: none;">Next</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

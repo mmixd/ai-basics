@@ -1,0 +1,621 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+
+    /* Flexbox settings for sticky footer */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #f5f8fb;
+    color: #080808;
+    padding: 100px 20px;
+    text-align: center;
+    margin-top: 60px; /* Adjust for fixed header */
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.hero-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.start-learning-button {
+    padding: 15px 30px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.start-learning-button:hover {
+    background-color: #218838;
+}
+
+/* Content Blocks */
+.content-block {
+    margin: 120px auto 40px auto; /* Adjusted margin-top to account for the fixed header */
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    color: #333;
+}
+
+/* Lesson Cards */
+.lesson-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.lesson-card {
+    flex: 1 1 calc(33.333% - 40px);
+    box-sizing: border-box;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+    position: relative;
+}
+
+.lesson-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.lesson-card.completed {
+    opacity: 0.8;
+}
+
+.lesson-card-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.lesson-card h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.lesson-card p {
+    color: #666;
+    font-size: 1em;
+    margin: 15px 0;
+}
+
+.start-lesson-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.start-lesson-button:hover {
+    background-color: #0056b3;
+}
+
+/* Completed Badge */
+.completed-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #28a745;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Card Styles for Lesson Sections */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.card {
+    flex: 1 1 calc(33.333% - 40px);
+    box-sizing: border-box;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.card p {
+    color: #666;
+    font-size: 1em;
+    margin: 15px 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .lesson-card,
+    .card {
+        flex: 1 1 calc(50% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .lesson-card,
+    .card {
+        flex: 1 1 100%;
+    }
+
+    .hero-content h2 {
+        font-size: 2em;
+    }
+
+    .start-learning-button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}
+
+/* Form Styles (Contact Page) */
+#contact-form {
+    margin-top: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1em;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.required {
+    color: #dc3545;
+    margin-left: 5px;
+}
+
+.submit-button {
+    padding: 12px 25px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #218838;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+/* Additional Styles */
+
+/* Navigation Buttons */
+.nav-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #0056b3;
+}
+
+/* Outline Buttons */
+.outline-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    margin: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.outline-button:hover {
+    background-color: #ddd;
+    color: #000;
+}
+
+/* Progress Bar */
+.progress-bar {
+    background-color: #fff;
+    padding: 10px 0;
+    position: sticky;
+    top: 116px; /* Adjust based on header height */
+    width: 100%;
+    z-index: 900;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+}
+
+.progress-bar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.progress-bar ul li {
+    flex: 1;
+    padding: 12px 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 0 8px;
+    background-color: #f0f0f0; /* Default background for upcoming steps */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    font-size: 16px;
+    position: relative;
+}
+
+.progress-bar ul li a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.progress-bar ul li.active {
+    background-color: #007bff; /* Darker blue for active step */
+    color: white;
+    transform: translateY(-2px);
+    font-weight: bold;
+}
+
+.progress-bar ul li.completed {
+    background-color: #5a9bd4; /* Lighter blue for completed steps */
+    color: white;
+    font-weight: bold;
+}
+
+.progress-bar ul li:hover {
+    background-color: #e8e8e8; /* Hover effect */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Quiz Styles */
+.quiz-question {
+    margin-bottom: 30px;
+}
+
+.quiz-question p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.quiz-question label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.quiz-question input[type="radio"] {
+    margin-right: 10px;
+}
+
+.quiz-result {
+    margin-top: 30px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.quiz-result p {
+    margin-bottom: 15px;
+}
+
+.correct-answer {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.incorrect-answer {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Disable pointer events after submission */
+.quiz-submitted .quiz-question label {
+    pointer-events: none;
+    color: #6c757d;
+}
+
+/* Show selected answer */
+.quiz-submitted input[type="radio"]:checked + label {
+    font-weight: bold;
+}
+
+/* Next Button Styling */
+#next-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+#next-button:hover {
+    background-color: #0056b3;
+}
+
+/* Completion Section */
+.completion-section {
+    background-color: #f0f8ff; /* Light blue background for a celebratory feel */
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 80px; /* Adjust for fixed header */
+}
+
+.completion-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.completion-image {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.completion-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #28a745; /* Green color to indicate success */
+}
+
+.completion-section p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.achievement-badge {
+    margin: 40px 0;
+}
+
+.achievement-badge img {
+    width: 120px;
+    height: auto;
+}
+
+.achievement-badge p {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 15px;
+}
+
+.start-next-lesson-button {
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.start-next-lesson-button:hover {
+    background-color: #0056b3;
+}
+
+/* Navigation Buttons (Completion Page) */
+.navigation-buttons {
+    margin-top: 40px;
+}
+
+.navigation-buttons .outline-button,
+.navigation-buttons .nav-button {
+    margin: 10px;
+    padding: 12px 25px;
+    font-size: 1em;
+}
+
+.navigation-buttons .outline-button {
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navigation-buttons .outline-button:hover {
+    background-color: #ddd;
+    color: #000;
+}
+
+.navigation-buttons .nav-button {
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navigation-buttons .nav-button:hover {
+    background-color: #218838;
+}
+
+/* About and Contact Page Specific Styles */
+.content-block h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.content-block p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Social Media Links */
+.social-media-links {
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+.social-media-links a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.social-media-links a:hover {
+    text-decoration: underline;
+}
